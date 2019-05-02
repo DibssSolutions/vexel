@@ -1,0 +1,5 @@
+<svg viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+    <path d="M14.147.525a.984.984 0 0 1 1.696 0l13.997 24.01c.377.647-.094 1.455-.848 1.455H.999c-.754 0-1.226-.808-.849-1.455L14.147.525z" fill="#c61f40" fill-rule="nonzero"/>
+    <path fill="#fff" fill-rule="nonzero" d="M13.526 8.771h2.939v7.761h-2.939z"/>
+    <ellipse cx="14.995" cy="19.927" rx="1.469" ry="1.455" fill="#fff"/>
+</svg>

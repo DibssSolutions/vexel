@@ -1,0 +1,91 @@
+.row {
+	@include media-up(xs) {
+		@include flex($j-fs, $a-st);
+		flex-wrap: wrap;
+		margin: -15px;
+
+		&--aic {
+			align-items: center;
+		}
+
+		&--aife {
+			align-items: flex-end;
+		}
+	}
+}
+
+.col {
+	@include media-down(xs) {
+		padding-bottom: 15px;
+	}
+
+	@include media-up(xs) {
+		flex: 1 1 100%;
+		max-width: 100%;
+		padding: 15px;
+		flex-grow: 1;
+	}
+
+	&--half {
+		@include media-up(md) {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+	}
+
+	&--third,
+	&--1-3 {
+		@include media-up(md) {
+			flex-basis: 33.33333%;
+			max-width: 33.33333%;
+		}
+	}
+
+	&--2-3 {
+		@include media-up(md) {
+			flex-basis: 66.66666%;
+			max-width: 66.66666%;
+		}
+	}
+
+	&--fourth {
+		@include media-up(sm) {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+
+		@include media-up(md) {
+			flex-basis: 33.33333%;
+			max-width: 33.33333%;
+		}
+
+		@include media-up(lg) {
+			flex-basis: 25%;
+			max-width: 25%;
+		}
+	}
+
+	&--fifth {
+		@include media-up(md) {
+			flex-basis: 25%;
+			max-width: 25%;
+		}
+
+		@include media-up(lg) {
+			flex-basis: 20%;
+			max-width: 20%;
+		}
+	}
+
+	&--sixth {
+		@include media-up(md) {
+			flex-basis: 25%;
+			max-width: 25%;
+		}
+
+		@include media-up(lg) {
+			flex-basis: 20%;
+			max-width: 20%;
+		}
+	}
+}

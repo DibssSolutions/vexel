@@ -1,0 +1,356 @@
+{% extends "layouts/_layout.html" %}
+{% set title = "Cabinet | Workspace" %}
+
+{% block content %}
+{% include "includes/header.html" %}
+
+<div class="main">
+	<div class="container">
+		<div class="cabinet">
+			<div class="cabinet__wrap">
+				<div class="cabinet__top">
+					<div class="cabinet__mode">
+						<button class="btn-mode">Dark mode</button>
+					</div>
+					<div class="cabinet__label">Hello, stranger!</div>
+					<div class="cabinet__title">Welcome to your workspace</div>
+				</div>
+
+				<div class="cabinet__body">
+					<div class="my-vexels">
+						<div class="my-vexels__wrap">
+							<div class="my-vexels__top">
+								<div class="my-vexels__info">
+									<div class="my-vexels__added">
+										4 vexels added
+									</div>
+									<div class="my-vexels__selected">
+										1/4 selected
+									</div>
+								</div>
+
+								<div class="my-vexels__ctrl">
+									<div class="my-vexels__copy">
+										<a href="#" class="ilink">
+											<span class="ilink__icon ilink__icon--copy"></span>
+											<span class="ilink__label">Copy Vexels</span>
+										</a>
+									</div>
+
+									<div class="my-vexels__views">
+										<div class="vexel-views">
+											<div class="vexel-views__list">
+												<div class="vexel-views__item">
+													<a href="#" class="views-link views-link--active views-link--slider">Slider</a>
+												</div>
+												<div class="vexel-views__item">
+													<a href="#" class="views-link views-link--grid">Grid</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="my-vexels__body">
+								<div class="my-vexels__slider">
+									<div class="v-slider">
+										<div class="v-slider__wrap js-slider-wrap">
+											<div class="v-slider__track">
+												<div class="v-slider__list js-slider">
+													<div class="v-slider__item">
+														<div class="vexel-teas vexel-teas--lg">
+															<div class="vexel-teas__wrap">
+																<div class="vexel-teas__top">
+																	<div class="vexel-teas__fav">
+																		<a href="#" class="fav-link fav-link--active">Favorite</a>
+																	</div>
+																	<div class="vexel-teas__num">
+																		3242 5625 5425
+																	</div>
+	
+																	<div class="vexel-teas__status">
+																		<span class="vexel-status vexel-status--good"></span>
+																	</div>
+																</div>
+																<div class="vexel-teas__center">
+																	<div class="vexel-teas__pass">
+																		<div class="vexel-password">
+																			<input type="password" placeholder="Password" class="vexel-password__input">
+																		</div>
+																	</div>
+																</div>
+	
+																<div class="vexel-teas__bottom">
+																	<div class="vexel-teas__value">
+																		<div class="vexel-value vexel-value--lock">
+																			<span class="vexel-value__qty">115</span>
+																			<span class="vexel-value__type">LTC</span>
+																		</div>
+																	</div>
+	
+																	<div class="vexel-teas__details">
+																		<a href="#" class="ilink disabled">
+																			<span class="ilink__icon ilink__icon--details"></span>
+																			<span class="ilink__label">Details</span>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="v-slider__item">
+														<div class="vexel-teas vexel-teas--lg">
+															<div class="vexel-teas__wrap">
+																<div class="vexel-teas__top">
+																	<div class="vexel-teas__fav">
+																		<a href="#" class="fav-link">Favorite</a>
+																	</div>
+																	<div class="vexel-teas__num">
+																		3242 5625 5425
+																	</div>
+	
+																	<div class="vexel-teas__status">
+																		<span class="vexel-status vexel-status--bad"></span>
+																	</div>
+																</div>
+																<div class="vexel-teas__center">
+	
+																</div>
+	
+																<div class="vexel-teas__bottom">
+																	<div class="vexel-teas__value">
+																		<div class="vexel-value">
+																			<span class="vexel-value__qty">3.800006</span>
+																			<span class="vexel-value__type">BTC</span>
+																		</div>
+																	</div>
+	
+																	<div class="vexel-teas__details">
+																		<a href="#" class="ilink">
+																			<span class="ilink__icon ilink__icon--details"></span>
+																			<span class="ilink__label">Details</span>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="v-slider__item">
+														<div class="vexel-teas vexel-teas--selected vexel-teas--lg">
+															<div class="vexel-teas__wrap">
+																<div class="vexel-teas__top">
+																	<div class="vexel-teas__fav">
+																		<a href="#" class="fav-link fav-link--active">Favorite</a>
+																	</div>
+																	<div class="vexel-teas__num">
+																		3242 5625 5425
+																	</div>
+	
+																	<div class="vexel-teas__status">
+																		<span class="vexel-status vexel-status--good"></span>
+																	</div>
+																</div>
+																<div class="vexel-teas__center">
+	
+																</div>
+	
+																<div class="vexel-teas__bottom">
+																	<div class="vexel-teas__value">
+																		<div class="vexel-value vexel-value--lock">
+																			<span class="vexel-value__qty">1000</span>
+																			<span class="vexel-value__type">USD</span>
+																		</div>
+																	</div>
+	
+																	<div class="vexel-teas__details">
+																		<a href="#" class="ilink">
+																			<span class="ilink__icon ilink__icon--details"></span>
+																			<span class="ilink__label">Details</span>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													{% for i in range(0,5) %}
+													<div class="v-slider__item">
+													    	<div class="vexel-teas vexel-teas--lg">
+													    		<div class="vexel-teas__wrap">
+													    			<div class="vexel-teas__top">
+													    				<div class="vexel-teas__fav">
+													    					<a href="#" class="fav-link fav-link--active">Favorite</a>
+													    				</div>
+													    				<div class="vexel-teas__num">
+													    					3242 5625 5425
+													    				</div>
+													    
+													    				<div class="vexel-teas__status">
+													    					<span class="vexel-status vexel-status--good"></span>
+													    				</div>
+													    			</div>
+													    			<div class="vexel-teas__center">
+													    				<div class="vexel-teas__pass">
+													    					<div class="vexel-password">
+													    						<input type="password" placeholder="Password" class="vexel-password__input">
+													    					</div>
+													    				</div>
+													    			</div>
+													    
+													    			<div class="vexel-teas__bottom">
+													    				<div class="vexel-teas__value">
+													    					<div class="vexel-value vexel-value--lock">
+													    						<span class="vexel-value__qty">115</span>
+													    						<span class="vexel-value__type">LTC</span>
+													    					</div>
+													    				</div>
+													    
+													    				<div class="vexel-teas__details">
+													    					<a href="#" class="ilink disabled">
+													    						<span class="ilink__icon ilink__icon--details"></span>
+													    						<span class="ilink__label">Details</span>
+													    					</a>
+													    				</div>
+													    			</div>
+													    		</div>
+													    	</div>
+													</div>
+													{% endfor %}
+												</div>
+											</div>
+											{#
+
+											<div class="v-slider__ctrl">
+												<div class="slider-ctrl">
+													<div class="slider-ctrl__item slider-ctrl__prev">
+														<button class="slider-btn slider-btn--prev js-slider-btn-prev">Prev</button>
+													</div>
+													<div class="slider-ctrl__item slider-ctrl__next">
+														<button class="slider-btn slider-btn--next js-slider-btn-next">Next</button>
+													</div>
+												</div>
+											</div>
+												<div class="v-slider__dots">
+													<div class="slider-dots">
+														<ul class="slider-dots__list">
+															<li class="slider-dots__item">
+																<button class="dots-btn dots-btn--active"></button>
+															</li>
+															<li class="slider-dots__item">
+																<button class="dots-btn"></button>
+															</li>
+															<li class="slider-dots__item">
+																<button class="dots-btn"></button>
+															</li>
+															<li class="slider-dots__item">
+																<button class="dots-btn"></button>
+															</li>
+														</ul>
+													</div>
+												</div>
+											#}
+										</div>
+									</div>
+								</div>
+								<div class="my-vexels__extra">
+									<a href="#" class="btn btn--bordered">Add another vexel</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cabinet__bottom">
+					<div class="v-controls">
+						<div class="v-controls__wrap">
+							<div class="v-controls__item">
+								<a href="#" class="v-control">
+									<div class="v-control__visual">
+										<div class="v-control__cover">
+											<img src="img/icon_control-replenish-white.svg" width="30" height="27" alt="" class="v-control__icon">
+										</div>
+									</div>
+									<div class="v-control__main">
+										<div class="v-control__title">Replenish</div>
+										<div class="v-control__description">Replenish vexel</div>
+									</div>
+								</a>
+							</div>
+							<div class="v-controls__item">
+								<a href="#" class="v-control">
+									<div class="v-control__visual">
+										<div class="v-control__cover">
+											<img src="img/icon_control-withdraw-white.svg" width="30" height="30" alt="" class="v-control__icon">
+										</div>
+									</div>
+									<div class="v-control__main">
+										<div class="v-control__title">Withdraw</div>
+										<div class="v-control__description">Transfer vexels</div>
+									</div>
+								</a>
+							</div>
+							<div class="v-controls__item">
+								<a href="#" class="v-control">
+									<div class="v-control__visual">
+										<div class="v-control__cover">
+											<img src="img/icon_control-split-white.svg" width="36" height="26" alt="" class="v-control__icon">
+										</div>
+									</div>
+									<div class="v-control__main">
+										<div class="v-control__title">Split</div>
+										<div class="v-control__description">Split one vexel to several</div>
+									</div>
+								</a>
+							</div>
+							<div class="v-controls__item">
+								<a href="#" class="v-control">
+									<div class="v-control__visual">
+										<div class="v-control__cover">
+											<img src="img/icon_control-change-white.svg" width="30" height="20" alt="" class="v-control__icon">
+										</div>
+									</div>
+									<div class="v-control__main">
+										<div class="v-control__title">Change</div>
+										<div class="v-control__description">Change currency or details</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="add-another" id="add-another">
+	<div class="container">
+		 <div class="add-another__wrap">
+			 <div class="add-another__item">
+				 <div class="add-another__label">Add another vexel</div>
+			 </div>
+			 <div class="add-another__item add-another__item--main">
+				 <div class="add-another__form">
+					<form action="" class="add-form">
+						<div class="add-form__group">
+							<input type="text" class="form-input" placeholder="0000 0000 0000 - 0000 0000 0000 0000 00">
+						</div>
+						<div class="add-form__submit">
+							<button class="btn btn--co" type="submit">Add</button>
+						</div>
+					</form>
+				 </div>
+			 </div>
+			 <div class="add-another__item">
+				 <div class="add-another__btn">
+					 <a href="#" class="btn btn--bordered">Create</a>
+				 </div>
+			 </div>
+			 <div class="add-another__item">
+				 <a href="#" class="btn btn--bordered">Choose</a>
+			 </div>
+		 </div>
+	</div>
+</div>
+
+{% endblock %}

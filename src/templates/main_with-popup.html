@@ -1,0 +1,192 @@
+{% extends "layouts/_layout.html" %}
+{% set title = "Cabinet" %}
+
+{% block content %}
+{% include "includes/header.html" %}
+
+<div class="main main--light">
+	<div class="container">
+		<div class="cabinet">
+			<div class="cabinet__wrap">
+				<div class="cabinet__top">
+					<div class="cabinet__mode">
+						<button class="btn-mode">Dark mode</button>
+					</div>
+					<div class="cabinet__label">Hello, stranger!</div>
+					<div class="cabinet__title">Welcome to your workspace</div>
+					<div class="cabinet__description">
+						Choose one of the possible options to get started. You can sign in to get more features avaliable, but registration is completely optional.
+					</div>
+					<div class="cabinet__enter">
+						<div class="c-enter">
+							<div class="c-enter__wrap">
+								<div class="c-enter__item">
+									<a href="#" class="c-enter__link">Register</a>
+								</div>
+								<div class="c-enter__item">
+									<span class="c-enter__label">or</span>
+								</div>
+								<div class="c-enter__item">
+									<a href="#" class="c-enter__link">Sign in</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cabinet__body">
+					<div class="cabinet__main">
+						<div class="cabinet__extra">
+							<div class="c-block">
+								<div class="c-block__wrap">
+									<div class="c-block__cover">
+										<img src="img/icon_pencil-clr.svg" width="42" height="42" alt="" class="c-block__img">
+									</div>
+									<div class="c-block__info">
+										<div class="c-block__title">Enter vexel number</div>
+										<div class="c-block__description">Use your vexel’s number and code to begin.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cabinet__adding">
+							<div class="c-adding">
+								<div class="c-adding__wrap">
+									<div class="c-adding__main">
+										<div class="c-adding__line">
+											<div class="c-adding__group">
+												<div class="c-adding__control">
+													<input type="text" class="c-adding__input form-input" value="4312 4743 2600 - 4625 6245 9350 4562 5387 93">
+												</div>
+												<div class="c-adding__control">
+													<input type="text" class="c-adding__input form-input" placeholder="0000 0000 0000 - 0000 0000 0000 0000 00">
+													<div class="c-adding__remove">
+														<button class="btn-remove">Remove</button>
+													</div>
+												</div>
+											</div>
+											<div class="c-adding__submit">
+												<button class="btn btn--co btn--lg">Start</button>
+											</div>
+										</div>
+									</div>
+									<div class="c-adding__bottom">
+										<div class="c-adding__add">
+											<a href="#" class="ilink">
+												<span class="ilink__icon ilink__icon--plus"></span>
+												<span class="ilink__label">Add another Vexel</span>
+											</a>
+										</div>
+										<div class="c-adding__help-text">
+											<div class="help-text">You can paste several numbers in the field ya ne znayu kak normal'no sformulirovat' eto</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cabinet__bottom">
+					<div class="row">
+						<div class="col col--third">
+							<div class="c-block">
+								<div class="c-block__wrap">
+									<div class="c-block__cover">
+										<img src="img/icon_plus-clr.svg" width="42" height="42" alt="" class="c-block__img">
+									</div>
+									<div class="c-block__info">
+										<div class="c-block__title">Create new vexel</div>
+										<div class="c-block__description">By creating a new vexel you get a unique number and code and can use it right away!</div>
+									</div>
+									<div class="c-block__ctrl">
+										<a href="#" class="btn btn--co btn--lg">Create</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col--third">
+							<div class="c-block">
+								<div class="c-block__wrap">
+									<div class="c-block__cover">
+										<img src="img/icon_star-clr.svg" width="46" height="44" alt="" class="c-block__img">
+									</div>
+									<div class="c-block__info">
+										<div class="c-block__title">Open saved vexels</div>
+										<div class="c-block__description">If you are a registered user, you can use your saved vexels for a quick access.</div>
+
+										<div class="c-block__extra p-up p-up--xs open">
+											<div class="p-up__wrap">
+												<div class="s-vexels">
+													<div class="s-vexels__body">
+														<div class="s-vexels__list">
+															<div class="s-vexels__item">
+																<label class="checkbox">
+																	<input type="checkbox" class="checkbox__input" checked>
+																	<span class="checkbox__label">0000 0000 0000</span>
+																</label>
+															</div>
+															<div class="s-vexels__item">
+																<label class="checkbox">
+																	<input type="checkbox" class="checkbox__input" checked>
+																	<span class="checkbox__label">1212 1212 1212</span>
+																</label>
+															</div>
+															<div class="s-vexels__item">
+																<label class="checkbox">
+																	<input type="checkbox" class="checkbox__input">
+																	<span class="checkbox__label">6356 3432 8521</span>
+																</label>
+															</div>
+															<div class="s-vexels__item">
+																<label class="checkbox">
+																	<input type="checkbox" class="checkbox__input">
+																	<span class="checkbox__label">6666 0000 8888</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="s-vexels__bottom">
+														<a href="#" class="btn btn--co">Get Started</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="c-block__ctrl">
+										<a href="#" class="btn btn--co btn--lg">Choose</a>
+									</div>
+									<div class="c-block__bottom">
+										<div class="help-text">You need to sign in to use this option</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col--third">
+							<div class="c-block">
+								<div class="c-block__wrap">
+									<div class="c-block__cover">
+										<img src="img/icon_restore-clr.svg" width="48" height="42" alt="" class="c-block__img">
+									</div>
+									<div class="c-block__info">
+										<div class="c-block__title">Restore your last session</div>
+										<div class="c-block__description">If you are a registered user, you can continue working from the point you stopped the last time.</div>
+									</div>
+									<div class="c-block__ctrl">
+										<a href="#" class="btn btn--co btn--lg disabled">Restore</a>
+									</div>
+									<div class="c-block__bottom">
+										<div class="help-text">Nothing to restore yet</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

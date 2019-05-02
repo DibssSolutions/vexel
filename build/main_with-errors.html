@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Cabinet</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+
+  <body>
+    <div class="main-wrap">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrap">
+            <div class="header__logo">
+              <a href="./" class="logo">
+                <img src="img/logo_main.svg" width="108" height="36" alt="" class="logo__img">
+              </a>
+            </div>
+            <nav class="header__nav h-nav" id="main-nav">
+              <div class="h-nav__wrap">
+                <ul class="h-nav__list">
+                  <li class="h-nav__item">
+                    <a href="#" class="h-nav__link">What is Vexel</a>
+                  </li>
+                  <li class="h-nav__item">
+                    <a href="#" class="h-nav__link">Features</a>
+                  </li>
+                  <li class="h-nav__item">
+                    <a href="#" class="h-nav__link">Cryptocurrency</a>
+                  </li>
+                  <li class="h-nav__item">
+                    <a href="#" class="h-nav__link">Apps</a>
+                  </li>
+                  <li class="h-nav__item h-nav__item--interval">
+                    <a href="#" class="h-nav__link h-nav__link--extra">FAQ</a>
+                  </li>
+                  <li class="h-nav__item">
+                    <a href="#" class="h-nav__link h-nav__link--extra">About</a>
+                  </li>
+                  <li class="h-nav__item h-nav__item--btn">
+                    <a href="#" class="btn btn--co active">Cabinet</a>
+                  </li>
+                </ul>
+                <div class="h-nav__extra">
+                  <div class="h-nav__soci">
+                    <nav class="soci-nav">
+                      <ul class="soci-nav__list">
+                        <li class="soci-nav__item">
+                          <a href="#" class="soci-nav__link soci-nav__link--vk">vk</a>
+                        </li>
+                        <li class="soci-nav__item">
+                          <a href="#" class="soci-nav__link soci-nav__link--in">in</a>
+                        </li>
+                        <li class="soci-nav__item">
+                          <a href="#" class="soci-nav__link soci-nav__link--tg">tg</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="h-nav__lng-choice">
+                    <select class="lng lng--dark">
+                      <option value="en" selected>En</option>
+                      <option value="ru">Ru</option>
+                      <option value="ch">Ch</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <div class="header__btn">
+              <button class="btn-main">
+                <span class="btn-main__line"></span>
+                <span class="btn-main__line"></span>
+                <span class="btn-main__line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main main--light">
+        <div class="container">
+          <div class="cabinet">
+            <div class="cabinet__wrap">
+              <div class="cabinet__top">
+                <div class="cabinet__mode">
+                  <button class="btn-mode">Dark mode</button>
+                </div>
+                <div class="cabinet__label">Hello, stranger!</div>
+                <div class="cabinet__title">Welcome to your workspace</div>
+                <div class="cabinet__description"> Choose one of the possible options to get started. You can sign in to get more features avaliable, but registration is completely optional. </div>
+                <div class="cabinet__enter">
+                  <div class="c-enter">
+                    <div class="c-enter__wrap">
+                      <div class="c-enter__item">
+                        <a href="#" class="c-enter__link">Register</a>
+                      </div>
+                      <div class="c-enter__item">
+                        <span class="c-enter__label">or</span>
+                      </div>
+                      <div class="c-enter__item">
+                        <a href="#" class="c-enter__link">Sign in</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cabinet__body">
+                <div class="cabinet__main">
+                  <div class="cabinet__extra">
+                    <div class="c-block">
+                      <div class="c-block__wrap">
+                        <div class="c-block__cover">
+                          <img src="img/icon_pencil-clr.svg" width="42" height="42" alt="" class="c-block__img">
+                        </div>
+                        <div class="c-block__info">
+                          <div class="c-block__title">Enter vexel number</div>
+                          <div class="c-block__description">Use your vexel’s number and code to begin.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cabinet__adding">
+                    <div class="c-adding">
+                      <div class="c-adding__wrap">
+                        <div class="c-adding__main">
+                          <div class="c-adding__line">
+                            <div class="c-adding__group">
+                              <div class="c-adding__control has-error">
+                                <input type="text" class="c-adding__input form-input" value="4312 4743 2600 - 4625 6245 9350 4562 5387 93">
+                              </div>
+                            </div>
+                            <div class="c-adding__submit">
+                              <button class="btn btn--co btn--lg disabled">Start</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-adding__bottom">
+                          <div class="error-text description"> Looks like you entered incorrect vexel data. Please try again. </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cabinet__bottom">
+                <div class="list">
+                  <div class="list__item">
+                    <div class="message message--danger">
+                      <div class="message__close">
+                        <button class="btn-close btn-close--white">Close</button>
+                      </div>
+                      <div class="message__wrap">
+                        <div class="message__main">
+                          <div class="message__cover">
+                            <img src="img/img_cover-error.svg" width="155" height="99" alt="" class="message__img">
+                          </div>
+                          <div class="message__title">Error!</div>
+                          <div class="message__description"> Oops! Something went wrong. Blabla. </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list__item">
+                    <div class="message message--danger">
+                      <div class="message__close">
+                        <button class="btn-close btn-close--white">Close</button>
+                      </div>
+                      <div class="message__wrap">
+                        <div class="message__main">
+                          <div class="message__cover">
+                            <img src="img/img_cover-error.svg" width="155" height="99" alt="" class="message__img">
+                          </div>
+                          <div class="message__title">Error!</div>
+                          <div class="message__description"> Oops! Something went wrong. Blabla. </div>
+                          <div class="message__extra">
+                            <div class="vexel-code">
+                              <div class="vexel-code__value"> 3242 5625 5425 - 0000 1111 2222 3333 4444 </div>
+                            </div>
+                          </div>
+                          <div class="message__description"> More information about recent operations see in history. </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list__item">
+                    <div class="message message--success">
+                      <div class="message__close">
+                        <button class="btn-close btn-close--white">Close</button>
+                      </div>
+                      <div class="message__wrap">
+                        <div class="message__main">
+                          <div class="message__cover">
+                            <img src="img/img_cover-success.svg" width="162" height="99" alt="" class="message__img">
+                          </div>
+                          <div class="message__title">Success!</div>
+                          <div class="message__description"> Vexel details were successfully updated.<br>Blablabla. </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list__item">
+                    <div class="message message--success">
+                      <div class="message__close">
+                        <button class="btn-close btn-close--white">Close</button>
+                      </div>
+                      <div class="message__wrap">
+                        <div class="message__main">
+                          <div class="message__cover">
+                            <img src="img/img_cover-success.svg" width="162 " height="99" alt="" class="message__img">
+                          </div>
+                          <div class="message__title">Success!</div>
+                          <div class="message__description"> Vexel details were successfully updated. New number: </div>
+                          <div class="message__extra">
+                            <div class="vexel-code">
+                              <div class="vexel-code__value"> 3242 5625 5425 - 0000 1111 2222 3333 4444 </div>
+                            </div>
+                          </div>
+                          <div class="message__description"> More information about recent operations see in history. </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link property="stylesheet" rel="stylesheet" href="css/third.css">
+    <link property="stylesheet" rel="stylesheet" href="fonts/stylesheet.css">
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+
+</html>
