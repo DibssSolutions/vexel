@@ -354,6 +354,7 @@ body {
 
 //main
 .main-wrap {
+	position: relative;
 	overflow: hidden;
 	
 	@include media-up(md) {
@@ -391,7 +392,6 @@ body {
 		background-color: $bg-light;
 	}
 }
-
 .cabinet {
 
 	&__top {

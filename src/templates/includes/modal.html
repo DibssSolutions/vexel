@@ -1,0 +1,117 @@
+<!-- begin modal -->
+<div class="modal" data-modal="details">
+    <div class="modal__container" data-modal-container>
+    	<div class="pp-box pp-box--sm">
+    		<div class="pp-box__wrap js-slider-modal">
+    			{% for i in range(0,3) %}
+			    <div class="vexel-card">
+			    	<div class="vexel-card__wrap">
+			    		<div class="vexel-card__top">
+			    			<div class="vexel-card__title">Vexel details</div>
+			    			<div class="vexel-card__fav">
+			    				<a href="#" class="fav-link fav-link--lg">Favorite</a>
+			    			</div>
+			    		</div>
+
+			    		<div class="vexel-card__main">
+			    			<div class="vexel-card__visual">
+			    				<div class="vexel-card__cover">
+			    					<img src="img/img_blank-qr.svg" width="130" height="130" alt="" class="vexel-card__qr">
+			    				</div>
+			    			</div>
+
+			    			<div class="vexel-card__control">
+			    				<div class="vexel-control">
+			    					<div class="vexel-control__list">
+			    						<div class="vexel-control__item">
+			    							<a href="#" class="ilink ilink--sm">
+			    								<span class="ilink__icon ilink__icon--change"></span>
+			    								<span class="ilink__label">Change</span>
+			    							</a>
+			    						</div>
+			    						<div class="vexel-control__item">
+			    							<a href="#" class="ilink ilink--sm">
+			    								<span class="ilink__icon ilink__icon--copy-blank"></span>
+			    								<span class="ilink__label">Copy</span>
+			    							</a>
+			    						</div>
+			    						<div class="vexel-control__item">
+			    							<a href="#" class="ilink ilink--sm">
+			    								<span class="ilink__icon ilink__icon--share"></span>
+			    								<span class="ilink__label">Share</span>
+			    							</a>
+			    						</div>
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="vexel-card__info">
+			    				<div class="vexel-card__item">
+			    					<div class="vexel-card__label">Number</div>
+			    					<div class="vexel-card__num">3242 5625 5425</div>
+			    				</div>
+			    				<div class="vexel-card__item">
+			    					<div class="vexel-card__label">Code</div>
+			    					<div class="vexel-card__num">0000 1111 2222 3333 4444</div>
+			    				</div>
+			    			</div>
+			    		</div>
+
+			    		<div class="vexel-card__bottom">
+			    			<div class="vexel-card__b-left">
+			    				<div class="vexel-card__value">
+			    					<div class="vexel-value vexel-value--lg">
+			    						<span class="vexel-value__qty">565.8035352</span>
+			    						<span class="vexel-value__type">BTC</span>
+			    						<span class="vexel-value__btn">
+			    							<button class="btn-lock">Lock</button>
+			    						</span>
+			    					</div>
+			    				</div>
+
+			    				<div class="vexel-card__on-way">
+			    					<div class="vexel-on-way">
+			    						<span class="vexel-on-way__value">160 BTC, 39 USD</span>
+			    						<span class="vexel-on-way__label">on the way</span>
+			    					</div>
+			    				</div>
+
+			    				<div class="vexel-card__request">
+			    					<a href="#" class="ilink">Request Money</a>
+			    				</div>
+			    			</div>
+			    			<div class="vexel-card__b-right">
+			    				<div class="vexel-card__protect">
+			    					<div class="vexel-protect">
+			    						<div class="vexel-protect__visual">
+			    							<div class="vexel-protect__cover">
+			    								<span class="vexel-status vexel-status--bad"></span>
+			    							</div>
+			    						</div>
+			    						<div class="vexel-protect__main">
+			    							<div class="vexel-protect__btns">
+			    								<div class="vexel-protect__btn">
+			    									<a href="#" class="btn btn--co">Protect Vexel</a>
+			    								</div>
+			    							</div>
+
+			    							<div class="vexel-protect__info">
+			    								This vexel currently has no protection. You can protect it with password or Google Authenticator
+			    							</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    			</div>
+			    		</div>
+
+			    		<div class="vexel-card__nav">
+			    			<a href="#" class="ilink ilink--goto">Go to Vexel History</a>
+			    		</div>
+			    	</div>
+			    </div>
+    			{% endfor %}
+    		</div>
+    	</div>
+    </div>
+</div>
+<!-- end modal -->
