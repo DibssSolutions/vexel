@@ -3458,6 +3458,7 @@ body {
 		margin: 0 -10px;
 		padding: 0 10px;
 		overflow: hidden;
+		backface-visibility: hidden;
 		background-color: #fff;
 		.is-flip & {
 			position: relative;
