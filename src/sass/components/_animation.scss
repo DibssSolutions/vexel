@@ -1,3 +1,5 @@
+// ******************************** MAIN ********************************
+
 [data-anim] {
 	position: relative;
 }
@@ -16,7 +18,6 @@
 	flex-grow: 1;
 	flex-direction: column;
 	width: 100%;
-	// transition: opacity .3s, visibility .3s, z-index .3s;
 	&.is-animate {
 		position: relative;
 		top: auto;
@@ -46,3 +47,27 @@
 	opacity: 0;
 	transform: translateY(5px);
 }
+// ******************************** END MAIN ********************************
+
+// ******************************** FLIP ********************************
+
+[data-anim-flip] {
+	transition: 0.45s;
+	transform-style: preserve-3d;
+	&.is-flip {
+		transform: rotateX(180deg);
+		pointer-events: none;
+	}
+}
+[data-anim-flip-front]{
+	backface-visibility: hidden;
+}
+[data-anim-flip-back]{
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+	.is-flip & {
+		z-index: 2;
+		pointer-events: initial;
+	}
+}
+// ******************************** END FLIP ********************************

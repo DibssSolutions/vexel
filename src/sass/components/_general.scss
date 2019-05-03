@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 
 body {
 	font-family: $fnt-main;
@@ -9,6 +13,9 @@ body {
 	color: $clr-text;
 	line-height: 1.35;
 	font-variant-numeric: lining-nums;
+	&.is-overflow-hidden {
+		overflow: hidden;
+	}
 }
 
 .container {
@@ -1977,9 +1984,6 @@ body {
 		outline: none;
 	}
 
-	.slick-list {
-		overflow: visible !important;
-	}
 
 	&__wrap {
 		@include media-down(md) {
@@ -2035,8 +2039,7 @@ body {
 		@include media-up(md) {
 			flex-basis: 33.33333%;
 			max-width: 33.33333%;
-			padding-left: 15px;
-			padding-right: 15px;
+			padding: 4px 15px 15px 15px;
 			visibility: hidden;
 			opacity: 0;
 			transition: visibility .3s, opacity .3s;
@@ -2051,9 +2054,17 @@ body {
 			}
 		}
 	}
+	.slick-list {
+		@include media-down(md) {
+			overflow: visible !important;
+		}
+	}
 	
 	&__dots {
-		margin-top: 25px;
+		margin-top: 10px;
+		@include media-down(md) {
+			margin-top: 25px;
+		}
 	}
 
 	&__ctrl {
@@ -2065,9 +2076,12 @@ body {
 
 	.slick-dots {
 		padding: 0;
-		margin: 25px -5px 0;
+		margin: 10px -5px 0;
 		list-style: none;
 		@include flex($j-center, $a-center);
+		@include media-down(md) {
+			margin-top: 25px;
+		}
 		li {
 			padding-left: 5px;
 			padding-right: 5px;
@@ -2242,7 +2256,7 @@ body {
 	width: 100%;
 	border-radius: 18px;
 	background-color: $clr-white;
-	box-shadow: 0 6px 40px rgba($clr-gray, .3);
+	box-shadow: 0 6px 10px rgba(154, 140, 130, .3);
 	display: flex;
 	flex-direction: column;
 
@@ -2250,11 +2264,13 @@ body {
 		background-color: $bg-co_light;
 		
 		@include media-down(md) {
-			box-shadow: inset 0 0 0 2px #F9AB3A, 0 6px 40px rgba($clr-gray, .3);
+			// box-shadow: inset 0 0 0 2px #F9AB3A, 0 6px 40px rgba($clr-gray, .3);
+			box-shadow: inset 0 0 0 2px #F9AB3A, 0 6px 10px rgba(154, 140, 130, .3);
 		}
 
 		@include media-up(md) {
-			box-shadow: inset 0 0 0 4px #F9AB3A, 0 6px 40px rgba($clr-gray, .3);
+			// box-shadow: inset 0 0 0 4px #F9AB3A, 0 6px 40px rgba($clr-gray, .3);
+			box-shadow: inset 0 0 0 4px #F9AB3A, 0 6px 10px rgba(154, 140, 130, .3)
 		}
 	}
 
@@ -2445,7 +2461,8 @@ body {
 	}
 
 	&:hover,
-	&--active {
+	&--active,
+	&.is-active {
 		.v-control__cover {
 			background-color: $clr-text;
 		}
@@ -3288,10 +3305,11 @@ body {
 	display: none;
 	visibility: hidden;
 }
-
+	
 .vexel-card {
 	position: relative;
-
+	
+	
 	&__title {
 		font-weight: bold;
 		font-size: 18px;
@@ -3411,6 +3429,40 @@ body {
 
 		@include media-up(sm) {
 			font-size: 22px;
+		}
+	}
+
+	&__wrap {
+		position: relative;
+	}
+	&__front {
+		backface-visibility: hidden;
+		background-color: #fff;
+		transition: visibility .3s;
+		.is-flip & {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			visibility: hidden;
+		}
+	}
+	&__back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc(100% + 20px);
+		height: 100%;
+		margin: 0 -10px;
+		padding: 0 10px;
+		overflow: hidden;
+		background-color: #fff;
+		.is-flip & {
+			position: relative;
+			overflow: visible;
+			height: auto;
 		}
 	}
 

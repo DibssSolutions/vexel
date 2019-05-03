@@ -10,7 +10,7 @@
   min-width: 320px;
   transform: translate3d(0,0,0);
   overflow: auto;
-  transition: opacity 0.4s, visibility 0.4s, z-index 0.4s;
+  transition: opacity 0.25s, visibility 0.25s, z-index 0.25s;
   background-color: rgba(#1a202d, 0.5);
   padding: 25px 0;
   backface-visibility: hidden;
@@ -18,11 +18,12 @@
   flex-direction: column;
   justify-content: center;
   overflow-y: auto;
+  overflow-x: hidden;
   .slider-btn--next {
-    right: -95px;
+    right: -55px;
   }
   .slider-btn--prev {
-    left: -95px;
+    left: -55px;
   }
   .slick-dots {
     padding: 0;
@@ -30,12 +31,12 @@
     @include flex($j-center, $a-center);
     @include media-down(md) {
       position: absolute;
-      bottom: -80px;
+      bottom: -45px;
       left: 0;
       right: 0;
     }
     @include media-down(sm) {
-      bottom: -60px;
+      bottom: -45px;
     }
 
     @include media-up(md) {
@@ -63,11 +64,24 @@
       cursor: pointer;
       outline: none;
       font-size: 0;
-      transition: .4s;
+      transition: background-color .4s;
       &:hover {
         background-color: $clr-text;
       }
     }
+  }
+  .slick-slide {
+    perspective: 1000px;
+    height: auto;
+  }
+  .slick-list {
+    overflow: visible !important;
+    @include media-down(sm) {
+      overflow: hidden !important;
+    }
+  }
+  .slick-list, .slick-track {
+    transition: height .3s;
   }
 }
   
@@ -84,14 +98,14 @@
   position: relative;
   max-width: 770px;
   width: 100%;
-  transform: translateY(50vh) scale(0.2);
+  transform: scale(0.7);
   z-index: 1;
   text-align: left;
-  transition: transform 0.4s ease-out;
+  transition: transform 0.3s ease-out;
   vertical-align: middle;
   display: inline-block;
   margin: 0 auto;
   [data-modal].is-open & {
-    transform: translateY(0) scale(1);
+    transform: scale(1);
   }
 }

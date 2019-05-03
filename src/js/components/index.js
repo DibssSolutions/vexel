@@ -1,3 +1,6 @@
+import './animation';
+
 import './_slider';
 import './_modal';
-import './animation';
+import './_cardFlip';
+import './_tabs';

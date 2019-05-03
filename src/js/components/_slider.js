@@ -13,6 +13,7 @@ const initSlider = (els,option) => {
     slider
 	    .slick(option)
 	    .addClass(LOADED);
+
   });
 };
 
@@ -24,12 +25,15 @@ window.initModalSlider = initSlider(modalSlider, {
   slidesToShow: 1,
   slideToScroll: 1,
   autoplay: false,
+  fade: true,
+  adaptiveHeight: true,
   prevArrow: prevArrow,
   nextArrow: nextArrow,
   responsive: [
 	  {
 	     	breakpoint: 991,
 	     	settings: {
+  				adaptiveHeight: true,
 	     		arrows: false
 	     	}
 	  }
@@ -63,5 +67,4 @@ window.initWorkspaceSlider = initSlider(sliderWorkspace, {
 	  }
   ]
 });
-
 

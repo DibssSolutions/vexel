@@ -1,117 +1,386 @@
 <!-- begin modal -->
 <div class="modal" data-modal="details">
-    <div class="modal__container" data-modal-container>
-    	<div class="pp-box pp-box--sm">
-    		<div class="pp-box__wrap js-slider-modal">
-    			{% for i in range(0,3) %}
+    <div class="modal__container js-slider-modal" data-modal-container>
+    	{% for i in range(0,3) %}
+    	<div class="pp-box pp-box--sm js-vexel-wrap" data-anim-flip>
+    		<div class="pp-box__wrap">
 			    <div class="vexel-card">
 			    	<div class="vexel-card__wrap">
-			    		<div class="vexel-card__top">
-			    			<div class="vexel-card__title">Vexel details</div>
-			    			<div class="vexel-card__fav">
-			    				<a href="#" class="fav-link fav-link--lg">Favorite</a>
-			    			</div>
-			    		</div>
-
-			    		<div class="vexel-card__main">
-			    			<div class="vexel-card__visual">
-			    				<div class="vexel-card__cover">
-			    					<img src="img/img_blank-qr.svg" width="130" height="130" alt="" class="vexel-card__qr">
+			    		<div class="vexel-card__front" data-anim-flip-front>
+			    			<div class="vexel-card__top">
+			    				<div class="vexel-card__title">Vexel details{{i}}</div>
+			    				<div class="vexel-card__fav">
+			    					<a href="#" class="fav-link fav-link--lg">Favorite</a>
 			    				</div>
 			    			</div>
 
-			    			<div class="vexel-card__control">
-			    				<div class="vexel-control">
-			    					<div class="vexel-control__list">
-			    						<div class="vexel-control__item">
-			    							<a href="#" class="ilink ilink--sm">
-			    								<span class="ilink__icon ilink__icon--change"></span>
-			    								<span class="ilink__label">Change</span>
-			    							</a>
-			    						</div>
-			    						<div class="vexel-control__item">
-			    							<a href="#" class="ilink ilink--sm">
-			    								<span class="ilink__icon ilink__icon--copy-blank"></span>
-			    								<span class="ilink__label">Copy</span>
-			    							</a>
-			    						</div>
-			    						<div class="vexel-control__item">
-			    							<a href="#" class="ilink ilink--sm">
-			    								<span class="ilink__icon ilink__icon--share"></span>
-			    								<span class="ilink__label">Share</span>
-			    							</a>
-			    						</div>
-			    					</div>
-			    				</div>
-			    			</div>
-
-			    			<div class="vexel-card__info">
-			    				<div class="vexel-card__item">
-			    					<div class="vexel-card__label">Number</div>
-			    					<div class="vexel-card__num">3242 5625 5425</div>
-			    				</div>
-			    				<div class="vexel-card__item">
-			    					<div class="vexel-card__label">Code</div>
-			    					<div class="vexel-card__num">0000 1111 2222 3333 4444</div>
-			    				</div>
-			    			</div>
-			    		</div>
-
-			    		<div class="vexel-card__bottom">
-			    			<div class="vexel-card__b-left">
-			    				<div class="vexel-card__value">
-			    					<div class="vexel-value vexel-value--lg">
-			    						<span class="vexel-value__qty">565.8035352</span>
-			    						<span class="vexel-value__type">BTC</span>
-			    						<span class="vexel-value__btn">
-			    							<button class="btn-lock">Lock</button>
-			    						</span>
+			    			<div class="vexel-card__main">
+			    				<div class="vexel-card__visual">
+			    					<div class="vexel-card__cover">
+			    						<img src="img/img_blank-qr.svg" width="130" height="130" alt="" class="vexel-card__qr">
 			    					</div>
 			    				</div>
 
-			    				<div class="vexel-card__on-way">
-			    					<div class="vexel-on-way">
-			    						<span class="vexel-on-way__value">160 BTC, 39 USD</span>
-			    						<span class="vexel-on-way__label">on the way</span>
-			    					</div>
-			    				</div>
-
-			    				<div class="vexel-card__request">
-			    					<a href="#" class="ilink">Request Money</a>
-			    				</div>
-			    			</div>
-			    			<div class="vexel-card__b-right">
-			    				<div class="vexel-card__protect">
-			    					<div class="vexel-protect">
-			    						<div class="vexel-protect__visual">
-			    							<div class="vexel-protect__cover">
-			    								<span class="vexel-status vexel-status--bad"></span>
+			    				<div class="vexel-card__control">
+			    					<div class="vexel-control">
+			    						<div class="vexel-control__list">
+			    							<div class="vexel-control__item">
+			    								<a href="#" class="ilink ilink--sm">
+			    									<span class="ilink__icon ilink__icon--change"></span>
+			    									<span class="ilink__label">Change</span>
+			    								</a>
+			    							</div>
+			    							<div class="vexel-control__item">
+			    								<a href="#" class="ilink ilink--sm">
+			    									<span class="ilink__icon ilink__icon--copy-blank"></span>
+			    									<span class="ilink__label">Copy</span>
+			    								</a>
+			    							</div>
+			    							<div class="vexel-control__item">
+			    								<a href="#" class="ilink ilink--sm">
+			    									<span class="ilink__icon ilink__icon--share"></span>
+			    									<span class="ilink__label">Share</span>
+			    								</a>
 			    							</div>
 			    						</div>
-			    						<div class="vexel-protect__main">
-			    							<div class="vexel-protect__btns">
-			    								<div class="vexel-protect__btn">
-			    									<a href="#" class="btn btn--co">Protect Vexel</a>
+			    					</div>
+			    				</div>
+
+			    				<div class="vexel-card__info">
+			    					<div class="vexel-card__item">
+			    						<div class="vexel-card__label">Number</div>
+			    						<div class="vexel-card__num">3242 5625 5425</div>
+			    					</div>
+			    					<div class="vexel-card__item">
+			    						<div class="vexel-card__label">Code</div>
+			    						<div class="vexel-card__num">0000 1111 2222 3333 4444</div>
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="vexel-card__bottom">
+			    				<div class="vexel-card__b-left">
+			    					<div class="vexel-card__value">
+			    						<div class="vexel-value vexel-value--lg">
+			    							<span class="vexel-value__qty">565.8035352</span>
+			    							<span class="vexel-value__type">BTC</span>
+			    							<span class="vexel-value__btn">
+			    								<button class="btn-lock">Lock</button>
+			    							</span>
+			    						</div>
+			    					</div>
+
+			    					<div class="vexel-card__on-way">
+			    						<div class="vexel-on-way">
+			    							<span class="vexel-on-way__value">160 BTC, 39 USD</span>
+			    							<span class="vexel-on-way__label">on the way</span>
+			    						</div>
+			    					</div>
+
+			    					<div class="vexel-card__request">
+			    						<a href="#" class="ilink">Request Money</a>
+			    					</div>
+			    				</div>
+			    				<div class="vexel-card__b-right">
+			    					<div class="vexel-card__protect">
+			    						<div class="vexel-protect">
+			    							<div class="vexel-protect__visual">
+			    								<div class="vexel-protect__cover">
+			    									<span class="vexel-status vexel-status--bad"></span>
 			    								</div>
 			    							</div>
+			    							<div class="vexel-protect__main">
+			    								<div class="vexel-protect__btns">
+			    									<div class="vexel-protect__btn">
+			    										<a href="#" class="btn btn--co">Protect Vexel</a>
+			    									</div>
+			    								</div>
 
-			    							<div class="vexel-protect__info">
-			    								This vexel currently has no protection. You can protect it with password or Google Authenticator
+			    								<div class="vexel-protect__info">
+			    									This vexel currently has no protection. You can protect it with password or Google Authenticator
+			    								</div>
 			    							</div>
 			    						</div>
 			    					</div>
 			    				</div>
 			    			</div>
-			    		</div>
 
-			    		<div class="vexel-card__nav">
-			    			<a href="#" class="ilink ilink--goto">Go to Vexel History</a>
+			    			<div class="vexel-card__nav">
+			    				<a href="#" class="ilink ilink--goto js-vexel-go-to">Go to Vexel History</a>
+			    			</div>
+			    		</div>
+			    		<div class="vexel-card__back" data-anim-flip-back>
+			    			<div class="vexel-card__top">
+			    				<div class="vexel-card__title">Vexel history{{i}}</div>
+			    				<div class="vexel-card__date">
+			    					<input type="text" class="form-input form-input--date" value="16.05.2018 - 01.01.2019">
+			    				</div>
+			    			</div>
+
+			    			<div class="vexel-card__table">
+			    				<div class="h-tbl">
+			    					<div class="h-tbl__wrap">
+			    						<div class="h-tbl__head h-tbl__head--pu">
+			    							<div class="h-tbl__row">
+			    								<div class="h-tbl__col h-tbl__date">Date</div>
+			    								<div class="h-tbl__col h-tbl__operation">Operation</div>
+			    								<div class="h-tbl__col h-tbl__balance">
+			    									<div class="h-tbl__balance-main">Balance</div>
+			    									<div class="h-tbl__balance-extra">&nbsp;</div>
+			    								</div>
+			    							</div>
+			    						</div>
+
+			    						<div class="h-tbl__body h-tbl__body--pu">
+			    							<div class="h-tbl__line">
+			    								<div class="h-tbl__btn">
+			    									<button class="btn-info">Information</button>
+			    								</div>
+			    								<div class="h-tbl__row">
+			    									<div class="h-tbl__col h-tbl__date">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Date</div>
+			    											<div class="tbl-item__value">10.01.2018 | 13.25</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__operation">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Operation</div>
+			    											<div class="tbl-item__value">Replenishment</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__balance">
+			    										<div class="h-tbl__balance-main">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__label">Balance</div>
+			    												<div class="tbl-item__value"><strong>5.803 BTC</strong></div>
+			    											</div>
+			    										</div>
+			    										<div class="h-tbl__balance-extra">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__value tbl-item__value--plus">+1 BTC</div>
+			    											</div>
+			    										</div>
+			    									</div>
+			    								</div>
+			    								<div class="h-tbl__extra hidden">
+			    									<div class="h-tbl__item">TXID: 4r429gf829rfhwel349t2fewhfl1923yr9fgewiehds</div>
+			    								</div>
+			    							</div>
+			    							<div class="h-tbl__line">
+			    								<div class="h-tbl__row">
+			    									<div class="h-tbl__col h-tbl__date">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Date</div>
+			    											<div class="tbl-item__value">04.01.2018 | 01.12</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__operation">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Operation</div>
+			    											<div class="tbl-item__value">Replenishment</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__balance">
+			    										<div class="h-tbl__balance-main">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__label">Balance</div>
+			    												<div class="tbl-item__value"><strong>4.803 BTC</strong></div>
+			    											</div>
+			    										</div>
+			    										<div class="h-tbl__balance-extra">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__value tbl-item__value--plus">+3.803 BTC</div>
+			    											</div>
+			    										</div>
+			    									</div>
+			    								</div>
+			    							</div>
+			    							<div class="h-tbl__line">
+			    								<div class="h-tbl__btn">
+			    									<button class="btn-info btn-info--active">Information</button>
+			    								</div>
+			    								<div class="h-tbl__row">
+			    									<div class="h-tbl__col h-tbl__date">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Date</div>
+			    											<div class="tbl-item__value">10.01.2018 | 13.25</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__operation">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Operation</div>
+			    											<div class="tbl-item__value">Withdraw</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__balance">
+			    										<div class="h-tbl__balance-main">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__label">Balance</div>
+			    												<div class="tbl-item__value"><strong>1 BTC</strong></div>
+			    											</div>
+			    										</div>
+			    										<div class="h-tbl__balance-extra">
+			    											&nbsp;
+			    										</div>
+			    									</div>
+			    								</div>
+
+			    								<div class="h-tbl__extra">
+			    									<div class="h-tbl__item">TXID: 4r429gf829rfhwel349t2fewhfl1923yr9fgewiehds</div>
+			    								</div>
+			    							</div>
+			    							<div class="h-tbl__line">
+			    								<div class="h-tbl__row">
+			    									<div class="h-tbl__col h-tbl__date">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Date</div>
+			    											<div class="tbl-item__value">10.01.2018 | 13.25</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__operation">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Operation</div>
+			    											<div class="tbl-item__value">Currency change</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__balance">
+			    										<div class="h-tbl__balance-main">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__label">Balance</div>
+			    												<div class="tbl-item__value"><strong>10 USD</strong></div>
+			    											</div>
+			    										</div>
+			    										<div class="h-tbl__balance-extra">
+			    											&nbsp;
+			    										</div>
+			    									</div>
+			    								</div>
+			    							</div>
+			    							<div class="h-tbl__line">
+			    								<div class="h-tbl__row">
+			    									<div class="h-tbl__col h-tbl__date">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Date</div>
+			    											<div class="tbl-item__value">10.01.2018 | 13.25</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__operation">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Operation</div>
+			    											<div class="tbl-item__value">Currency change</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__balance">
+			    										<div class="h-tbl__balance-main">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__label">Balance</div>
+			    												<div class="tbl-item__value"><strong>15.803 LTC</strong></div>
+			    											</div>
+			    										</div>
+			    										<div class="h-tbl__balance-extra">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__value tbl-item__value--minus">-88.578 LTC</div>
+			    											</div>
+			    										</div>
+			    									</div>
+			    								</div>
+			    							</div>
+			    							<div class="h-tbl__line">
+			    								<div class="h-tbl__row">
+			    									<div class="h-tbl__col h-tbl__date">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Date</div>
+			    											<div class="tbl-item__value">10.01.2018 | 13.25</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__operation">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Operation</div>
+			    											<div class="tbl-item__value">Replenishment</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__balance">
+			    										<div class="h-tbl__balance-main">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__label">Balance</div>
+			    												<div class="tbl-item__value"><strong>160 000 USD</strong></div>
+			    											</div>
+			    										</div>
+			    										<div class="h-tbl__balance-extra">
+			    											&nbsp;
+			    										</div>
+			    									</div>
+			    								</div>
+			    							</div>
+			    							<div class="h-tbl__line">
+			    								<div class="h-tbl__row">
+			    									<div class="h-tbl__col h-tbl__date">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Date</div>
+			    											<div class="tbl-item__value">10.01.2018 | 13.25</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__operation">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Operation</div>
+			    											<div class="tbl-item__value">Currency change</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__balance">
+			    										<div class="h-tbl__balance-main">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__label">Balance</div>
+			    												<div class="tbl-item__value"><strong>150 000 USD</strong></div>
+			    											</div>
+			    										</div>
+			    										<div class="h-tbl__balance-extra">
+			    											&nbsp;
+			    										</div>
+			    									</div>
+			    								</div>
+			    							</div>
+			    							<div class="h-tbl__line">
+			    								<div class="h-tbl__row">
+			    									<div class="h-tbl__col h-tbl__date">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Date</div>
+			    											<div class="tbl-item__value">10.01.2018 | 13.25</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__operation">
+			    										<div class="tbl-item">
+			    											<div class="tbl-item__label">Operation</div>
+			    											<div class="tbl-item__value">Replenishment</div>
+			    										</div>
+			    									</div>
+			    									<div class="h-tbl__col h-tbl__balance">
+			    										<div class="h-tbl__balance-main">
+			    											<div class="tbl-item">
+			    												<div class="tbl-item__label">Balance</div>
+			    												<div class="tbl-item__value"><strong>160 000 USD</strong></div>
+			    											</div>
+			    										</div>
+			    										<div class="h-tbl__balance-extra">
+			    											&nbsp;
+			    										</div>
+			    									</div>
+			    								</div>
+			    							</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="vexel-card__nav">
+			    				<a href="#" class="ilink ilink--goto js-vexel-back">Go to Vexel Details</a>
+			    			</div>
 			    		</div>
 			    	</div>
 			    </div>
-    			{% endfor %}
     		</div>
     	</div>
+    	{% endfor %}
     </div>
 </div>
 <!-- end modal -->
