@@ -3459,11 +3459,15 @@ body {
 		padding: 0 10px;
 		overflow: hidden;
 		backface-visibility: hidden;
+		visibility: hidden;
+		transition: visibility .3s;
 		background-color: #fff;
 		.is-flip & {
 			position: relative;
 			overflow: visible;
+			visibility: visible;
 			height: auto;
+			z-index: 1;
 		}
 	}
 
