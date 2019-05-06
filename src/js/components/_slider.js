@@ -39,32 +39,3 @@ window.initModalSlider = initSlider(modalSlider, {
 	  }
   ]
 });
-
-// init workspace slider
-const sliderWorkspace = $('.js-slider');
-window.initWorkspaceSlider = initSlider(sliderWorkspace, {
-  dots: true,
-  infinite: false,
-  slidesToShow: 3,
-  slideToScroll: 1,
-  autoplay: false,
-  prevArrow: prevArrow,
-  nextArrow: nextArrow,
-  responsive: [
-	  {
-	     	breakpoint: 991,
-	     	settings: {
-	     		arrows: false,
-	     		slidesToShow: 2
-	     	}
-	  },
-	  {
-	    	breakpoint: 767,
-	    	settings: {
-	    		arrows: false,
-	    	  slidesToShow: 1
-	    	}
-	  }
-  ]
-});
-

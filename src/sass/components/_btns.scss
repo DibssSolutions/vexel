@@ -404,6 +404,7 @@
 		display: block;
 		width: 10px;
 		height: 7px;
+		transition: transform .4s;
 		left: 0;
 		right: 0;
 
@@ -417,6 +418,9 @@
 			&:after {
 				transform: rotate(-45deg);
 			}
+			.is-open & {
+				transform: rotate(180deg);
+			}
 		}
 
 		&:last-child {
@@ -428,6 +432,9 @@
 
 			&:after {
 				transform: rotate(-135deg);
+			}
+			.is-open & {
+				transform: rotate(-180deg);
 			}
 		}
 

@@ -1,12 +1,12 @@
 <!-- begin modal -->
 <div class="modal" data-modal="details">
-    <div class="modal__container js-slider-modal" data-modal-container>
+    <div class="modal__container js-slider-modal" data-modal-container data-modal-inner>
     	{% for i in range(0,3) %}
-    	<div class="pp-box pp-box--sm js-vexel-wrap" data-anim-flip>
-    		<div class="pp-box__wrap">
-			    <div class="vexel-card">
-			    	<div class="vexel-card__wrap">
-			    		<div class="vexel-card__front" data-anim-flip-front>
+    	<div data-anim-flip>
+	    	<div class="pp-box pp-box--sm" data-anim-flip-front>
+	    		<div class="pp-box__wrap">
+				    <div class="vexel-card">
+				    	<div class="vexel-card__wrap">
 			    			<div class="vexel-card__top">
 			    				<div class="vexel-card__title">Vexel details{{i}}</div>
 			    				<div class="vexel-card__fav">
@@ -92,7 +92,7 @@
 			    							<div class="vexel-protect__main">
 			    								<div class="vexel-protect__btns">
 			    									<div class="vexel-protect__btn">
-			    										<a href="#" class="btn btn--co">Protect Vexel</a>
+			    										<a href="#" class="btn btn--co" data-modal-control="password">Protect Vexel</a>
 			    									</div>
 			    								</div>
 
@@ -108,9 +108,15 @@
 			    			<div class="vexel-card__nav">
 			    				<a href="#" class="ilink ilink--goto js-vexel-go-to">Go to Vexel History</a>
 			    			</div>
-			    		</div>
-			    		<div class="vexel-card__back" data-anim-flip-back>
-			    			<div class="vexel-card__top">
+				    	</div>
+				    </div>
+	    		</div>
+	    	</div>
+	    	<div class="pp-box pp-box--sm" data-anim-flip-back>
+	    		<div class="pp-box__wrap">
+				    <div class="vexel-card">
+				    	<div class="vexel-card__wrap">
+				    		<div class="vexel-card__top">
 			    				<div class="vexel-card__title">Vexel history{{i}}</div>
 			    				<div class="vexel-card__date">
 			    					<input type="text" class="form-input form-input--date" value="16.05.2018 - 01.01.2019">
@@ -375,12 +381,72 @@
 			    			<div class="vexel-card__nav">
 			    				<a href="#" class="ilink ilink--goto js-vexel-back">Go to Vexel Details</a>
 			    			</div>
-			    		</div>
-			    	</div>
-			    </div>
-    		</div>
+				    	</div>
+				    </div>
+	    		</div>
+	    	</div>
     	</div>
     	{% endfor %}
     </div>
+</div>
+<!-- end modal -->
+
+<!-- begin modal -->
+<div class="modal is-up" data-modal="password">
+	<div class="modal__container" data-modal-container>
+		<div class="pp-pass" data-modal-inner>
+			<div class="pp-pass__wrap">
+				<div class="pp-pass__head">
+					<div class="pp-pass__title">Vexel protection</div>
+				</div>
+				<div class="pp-pass__body">
+					<form action="" class="pp-pass__form">
+						<div class="pp-pass__group">
+							<div class="pp-pass__label">Choose security type</div>
+
+							<div class="pp-pass__control">
+								<div class="radios">
+									<div class="radios__item">
+										<label class="radio">
+											<input type="radio" name="protection" class="radio__input" checked>
+											<span class="radio__label">Password</span>
+										</label>
+									</div>
+									<div class="radios__item">
+										<label class="radio">
+											<input type="radio" name="protection" class="radio__input">
+											<span class="radio__label">Google Authenticator</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="pp-pass__group">
+							<div class="pp-pass__label">Create a password</div>
+
+							<div class="pp-pass__control pp-pass__control--eye">
+								<input type="password" class="form-input" value="MyPassword">
+								<button class="btn-eye" type="button">Show password</button>
+							</div>
+						</div>
+
+						<div class="pp-pass__group">
+							<div class="pp-pass__label">Repeat your password</div>
+
+							<div class="pp-pass__control pp-pass__control--eye">
+								<input type="password" class="form-input" value="MyPassword">
+								<button class="btn-eye" type="button">Show password</button>
+							</div>
+						</div>
+
+						<div class="pp-pass__submit">
+							<button class="btn btn--lg btn--co" type="submit">Enable protection</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- end modal -->

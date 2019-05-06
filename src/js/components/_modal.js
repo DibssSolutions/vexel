@@ -1,4 +1,5 @@
-import { OPEN, ACTIVE, BODY, LOADED, OVERFLOW_HIDDEN } from '../constants';
+import { OPEN, ACTIVE, BODY, HTMLBODY, HTML, LOADED, OVERFLOW_HIDDEN } from '../constants';
+import { SCROLL_WIDTH } from '../utils';
 
 const modal = () => {
 
@@ -8,30 +9,28 @@ const modal = () => {
     e.preventDefault();
     const control = $(this);
     const modal = modals.filter(`[data-modal="${control.data('modal-control')}"]`);
-    if (!control.hasClass(ACTIVE)) {
-      modals.removeClass(OPEN);
+    if (!modal.hasClass(OPEN)) {
       modal.addClass(OPEN);
-      controls.removeClass(ACTIVE);
-      control.addClass(ACTIVE);
-      BODY.addClass(OVERFLOW_HIDDEN);
+      HTML.css('paddingRight', SCROLL_WIDTH());
+      HTMLBODY.addClass(OVERFLOW_HIDDEN);
     }
     else {
       modal.removeClass(OPEN);
-      control.removeClass(ACTIVE);
-      BODY.removeClass(OVERFLOW_HIDDEN);
+      HTMLBODY.removeClass(OVERFLOW_HIDDEN);
     }
   });
 
-  const hide = () => {
-    modals.removeClass(OPEN);
-    controls.removeClass(ACTIVE);
-    BODY.removeClass(OVERFLOW_HIDDEN);
-  };
-
-  BODY.on('click', e => {
-    if ($(e.target).closest('[data-modal-container]').length || $(e.target).closest('[data-modal-control]').length ) return;
-    hide();
+  BODY.on('click', '[data-modal]', function(e) {
+    if ($(e.target).closest('[data-modal-inner]').length || $(e.target).closest('[data-modal-control]').length ) return;
+    if ($(e.target).closest('[data-modal]').length) {
+      $(this).removeClass(OPEN);
+      if ($('[data-modal].is-open').length === 0) {
+        HTMLBODY.removeClass(OVERFLOW_HIDDEN);
+        HTML.css('paddingRight', 0);
+      }
+    }
   });
+  
 };
 window.modal = modal;
 

@@ -189,10 +189,10 @@
 											<div class="vexel-views">
 												<div class="vexel-views__list">
 													<div class="vexel-views__item">
-														<a href="#" class="views-link views-link--active views-link--slider">Slider</a>
+														<a href="#" class="views-link views-link--active views-link--slider js-btn-set-slider">Slider</a>
 													</div>
 													<div class="vexel-views__item">
-														<a href="#" class="views-link views-link--grid">Grid</a>
+														<a href="#" class="views-link views-link--grid js-btn-set-grid">Grid</a>
 													</div>
 												</div>
 											</div>
@@ -204,10 +204,10 @@
 									<div class="my-vexels__slider">
 										<div class="v-slider">
 											<div class="v-slider__wrap">
-												<div class="v-slider__track">
+												<div class="v-slider__track js-v-slider-track">
 													<div class="v-slider__list js-slider">
 														<div class="v-slider__item">
-															<div class="vexel-teas vexel-teas--lg">
+															<div class="vexel-teas vexel-teas--lg js-vexel-teas" data-anim-scale>
 																<div class="vexel-teas__wrap">
 																	<div class="vexel-teas__top">
 																		<div class="vexel-teas__fav">
@@ -248,7 +248,7 @@
 															</div>
 														</div>
 														<div class="v-slider__item">
-															<div class="vexel-teas vexel-teas--lg">
+															<div class="vexel-teas vexel-teas--lg js-vexel-teas" data-anim-scale>
 																<div class="vexel-teas__wrap">
 																	<div class="vexel-teas__top">
 																		<div class="vexel-teas__fav">
@@ -285,7 +285,7 @@
 															</div>
 														</div>
 														<div class="v-slider__item">
-															<div class="vexel-teas vexel-teas--selected vexel-teas--lg">
+															<div class="vexel-teas vexel-teas--selected vexel-teas--lg js-vexel-teas" data-anim-scale>
 																<div class="vexel-teas__wrap">
 																	<div class="vexel-teas__top">
 																		<div class="vexel-teas__fav">
@@ -323,7 +323,7 @@
 														</div>
 														{% for i in range(0,5) %}
 														<div class="v-slider__item">
-														    	<div class="vexel-teas vexel-teas--lg">
+														    	<div class="vexel-teas vexel-teas--lg js-vexel-teas" data-anim-scale>
 														    		<div class="vexel-teas__wrap">
 														    			<div class="vexel-teas__top">
 														    				<div class="vexel-teas__fav">
@@ -994,6 +994,494 @@
 																			<div class="description">
 																				<p>This will change currency in all selected vexels, unless the currency is locked.<br>
 																				To lock/unlock currency you cn do this and that.</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="v-controls__history" data-accordion-group>
+								<div class="s-history" data-accordion-item>
+									<div class="s-history__top" data-accordion-trigger>
+										<div class="s-history__collapse">
+											<button class="btn-collapse">
+												<span></span>
+												Collapse
+												<span></span>
+											</button>
+										</div>
+										<div class="s-history__title" data-accordion-trigger>
+											<div class="title">Session history</div>
+										</div>
+										<div class="s-history__print">
+											<button class="btn-print">Print</button>
+										</div>
+									</div>
+
+									<div class="s-history__main" data-accordion-container>
+										<div class="s-history__description">
+											<div class="description">
+												Please note that this history is available only for the current working session. After reloading the page information will be unavailable.
+											</div>
+										</div>
+
+										<div class="s-history__body">
+											<div class="s-history__tbl">
+												<div class="sh-tbl">
+													<div class="sh-tbl__wrap">
+														<div class="sh-tbl__head">
+															<div class="sh-tbl__row">
+																<div class="sh-tbl__col sh-tbl__date">Date</div>
+																<div class="sh-tbl__col sh-tbl__operation">Operation</div>
+																<div class="sh-tbl__col sh-tbl__number">
+																	<div class="sh-tbl__number-main">Vexel number</div>
+																</div>
+																<div class="sh-tbl__col sh-tbl__balance">
+																	<div class="sh-tbl__balance-main">Balance</div>
+																	<div class="sh-tbl__balance-extra">&nbsp;</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="sh-tbl__body">
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 13.25</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Replenishment</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>5458 8375 5353</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>5.803 BTC</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			<div class="tbl-item">
+																				<div class="tbl-item__value tbl-item__value--plus">+1 BTC</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 12.58</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Replenishment</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>3462 7432 4816</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>12000 USD</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			<div class="tbl-item">
+																				<div class="tbl-item__value tbl-item__value--plus">+1000 USD (1 BTC)</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 11.15</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Merging</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>7536 2746 8326</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>214 BTC</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			&nbsp;
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">Vexels merged: 7536 2746 7272, 8349 2432 7643</div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 11.11</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Merging</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>7777 8888 9999</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>40437298 USD</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			&nbsp;
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">
+																		<div class="sh-tbl__extra-row">
+																			<div class="sh-tbl__extra-col">New vexel: 7777 8888 9999</div>
+																			<div class="sh-tbl__extra-col">Code: 1010 2929 3939 4848 5757</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">Vexels merged: 9494 8383 7272, 8349 2432 7643, 7437 8421 2400</div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 10.55</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Withdrawal</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>1111 9999 1111</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>5 LTC</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			&nbsp;
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">
+																		<div class="sh-tbl__extra-row">
+																			<div class="sh-tbl__extra-col">Payment system: Litecoin</div>
+																			<div class="sh-tbl__extra-col">Amount to withdraw: 10839 LTC</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">Address: 1HcGxUJq3Lwh4QWSvJv4WH8GTwAYz5EKx11JexCBsZ7vUJYxpVpB1rLJTJhqqC57uydE13T6uydvQbeQw9vWnEEwDa6j7HXKQHNpsj</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">Identifier: ccbf4c76cd26549c872bfb532f91b96d216ea5433f45b24c6a9741cb7035ddf0</div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 10.44</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Withdrawal</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>1111 9999 1111</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>15 LTC</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			&nbsp;
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">
+																		<div class="sh-tbl__extra-row">
+																			<div class="sh-tbl__extra-col">Payment system: Cash</div>
+																			<div class="sh-tbl__extra-col">Amount to withdraw: 10000 USD</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">Status: <span>Completed</span></div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 10.34</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Withdrawal</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>1111 9999 1111</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>25 LTC</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			&nbsp;
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">
+																		<div class="sh-tbl__extra-row">
+																			<div class="sh-tbl__extra-col">Payment system: Another vexel</div>
+																			<div class="sh-tbl__extra-col">Amount to withdraw: 18 LTC</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">
+																		<div class="sh-tbl__extra-row">
+																			<div class="sh-tbl__extra-col">1 New vexel: 0000 0000 8888</div>
+																			<div class="sh-tbl__extra-col">Code: 1010 2929 3939 4848 5757</div>
+																			<div class="sh-tbl__extra-col">Balance: 9 LTC</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">
+																		<div class="sh-tbl__extra-row">
+																			<div class="sh-tbl__extra-col">Status: <span>Completed</span></div>
+																			<div class="sh-tbl__extra-col">Code: 1010 2929 3939 4848 5757</div>
+																			<div class="sh-tbl__extra-col">Balance: 9 LTC</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 10.32</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Currency change</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>1111 9999 1111</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>25 LTC</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			<div class="tbl-item">
+																				<div class="tbl-item__value tbl-item__value--to">← 1000 USD</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 10.25</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Details change</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>1111 9999 1111</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__number-extra">
+																			<div class="tbl-item">
+																				<div class="tbl-item__value tbl-item__value--to">← 4632 8584 2500</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>1000 USD</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			&nbsp;
+																		</div>
+																	</div>
+																</div>
+																<div class="sh-tbl__extra">
+																	<div class="sh-tbl__item">
+																		<div class="sh-tbl__extra-row">
+																			<div class="sh-tbl__extra-col">New vexel: 7777 8888 9999</div>
+																			<div class="sh-tbl__extra-col">Code: 1010 2929 3939 4848 5757</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="sh-tbl__line">
+																<div class="sh-tbl__row">
+																	<div class="sh-tbl__col sh-tbl__date">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Date</div>
+																			<div class="tbl-item__value">10.01.2018 | 10.06</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__operation">
+																		<div class="tbl-item">
+																			<div class="tbl-item__label">Operation</div>
+																			<div class="tbl-item__value">Replenishment</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__number">
+																		<div class="sh-tbl__number-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Vexel number</div>
+																				<div class="tbl-item__value"><strong>4632 85842500</strong></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="sh-tbl__col sh-tbl__balance">
+																		<div class="sh-tbl__balance-main">
+																			<div class="tbl-item">
+																				<div class="tbl-item__label">Balance</div>
+																				<div class="tbl-item__value"><strong>1000 USD</strong></div>
+																			</div>
+																		</div>
+																		<div class="sh-tbl__balance-extra">
+																			<div class="tbl-item">
+																				<div class="tbl-item__value tbl-item__value--plus">+1000 USD</div>
 																			</div>
 																		</div>
 																	</div>
