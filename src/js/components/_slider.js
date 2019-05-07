@@ -25,7 +25,7 @@ window.initModalSlider = initSlider(modalSlider, {
   slidesToShow: 1,
   slideToScroll: 1,
   autoplay: false,
-  fade: true,
+  // fade: true,
   adaptiveHeight: true,
   prevArrow: prevArrow,
   nextArrow: nextArrow,
