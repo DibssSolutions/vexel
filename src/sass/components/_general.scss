@@ -2009,7 +2009,7 @@ body {
 	
 	&__list {
 		@include flex;
-		transition: opacity .3s ease-out, visibility .3s ease-out;
+		transition: opacity .3s linear, visibility .3s linear;
 
 		@include media-down(md) {
 			margin-left: -5px;

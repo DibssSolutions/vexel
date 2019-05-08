@@ -91,7 +91,6 @@ class setGrid {
   setGrid() {
   	this.btnSetGrid.on('click', e => {
       e.preventDefault();
-  	  this.slider.slick('unslick');
 
   	  this.btnSetSlider.removeClass(this.activeLinkClass);
   	  this.btnSetGrid.addClass(this.activeLinkClass);
@@ -99,6 +98,7 @@ class setGrid {
   	  this.slider.addClass(HIDDEN);
 
   	  setTimeout(() => { 
+        this.slider.slick('unslick');
   	  	this.slider.addClass(this.activegrid);
   	  	this.cards
   	  		.removeClass(this.cardLg)

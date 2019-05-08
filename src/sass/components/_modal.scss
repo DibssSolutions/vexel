@@ -87,6 +87,9 @@
       opacity: 1;
     }
   }
+  .slick-list {
+    border-radius: 18px;
+  }
   .no-hodden .slick-list {
     overflow: visible !important;
     @include media-down(sm) {
