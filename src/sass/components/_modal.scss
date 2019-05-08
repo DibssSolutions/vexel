@@ -14,12 +14,22 @@
   background-color: rgba(#1a202d, 0.5);
   padding: 25px 0;
   backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
   overflow-y: scroll;
   overflow-x: hidden;
   backface-visibility: hidden;
+  text-align: center;
+  font-size: 0;
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+    
   &.is-up {
     background-color: transparent;
   }
@@ -117,7 +127,7 @@
   position: relative;
   max-width: 770px;
   width: 100%;
-  transform: scale(0.7);
+  transform: scale(0.6);
   z-index: 1;
   text-align: left;
   transition: transform 0.3s ease-out;
@@ -125,6 +135,6 @@
   display: inline-block;
   margin: 0 auto;
   [data-modal].is-open & {
-    transform: scale(1);
+    transform: scale(1) translate(0,0) !important;
   }
 }
