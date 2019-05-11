@@ -61,7 +61,7 @@ window.mainAnim = new TimelineMax({ paused: true })
   .eventCallback('onComplete', () => { main.remove(); }, null );
 
 
-btnStart.on('click', () => {
-  window.setGrid();
-  window.mainAnim.play();
-});
+// btnStart.on('click', () => {
+//   window.setGrid();
+//   window.mainAnim.play();
+// });
