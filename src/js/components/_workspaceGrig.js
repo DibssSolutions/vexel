@@ -3,7 +3,7 @@ import { LOADED, HIDDEN, WIN } from '../constants';
 import { mediaWidth } from '../utils';
 
 
-class setGrid {
+class InitSetGrid {
 
   constructor(options) {
   	this.slider = $('.js-slider');
@@ -124,6 +124,9 @@ class setGrid {
   
 };
 
-window.setGrid = new setGrid;
+window.setGrid = () => {
+  new InitSetGrid();
+};
 
-window.setGrid();
+
+// window.setGrid();
