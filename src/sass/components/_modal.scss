@@ -130,11 +130,13 @@
   transform: scale(0.6);
   z-index: 1;
   text-align: left;
-  transition: transform 0.3s ease-out;
   vertical-align: middle;
   display: inline-block;
   margin: 0 auto;
-  [data-modal].is-open & {
+  [data-modal].is-open.is-animate & {
     transform: scale(1) translate(0,0) !important;
+  }
+  [data-modal].is-animate & {
+    transition: transform 0.3s ease-out;
   }
 }

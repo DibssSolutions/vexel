@@ -24,7 +24,7 @@ const showCards = () => {
   });
 };
 
-const mainAnim = new TimelineMax({ paused: true })
+window.mainAnim = new TimelineMax({ paused: true })
   .to( main, 0.8, {
     y: WIN.height(),
     ease: Power3.easeInOut
@@ -62,5 +62,6 @@ const mainAnim = new TimelineMax({ paused: true })
 
 
 btnStart.on('click', () => {
-  mainAnim.play();
+  window.setGrid();
+  window.mainAnim.play();
 });

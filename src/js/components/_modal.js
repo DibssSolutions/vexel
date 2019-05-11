@@ -1,4 +1,4 @@
-import { OPEN, ACTIVE, BODY, HTMLBODY, HTML, LOADED, OVERFLOW_HIDDEN } from '../constants';
+import { OPEN, ACTIVE, BODY, HTMLBODY, HTML, LOADED, OVERFLOW_HIDDEN, ANIMATE } from '../constants';
 import { SCROLL_WIDTH } from '../utils';
 
 const modal = () => {
@@ -19,11 +19,18 @@ const modal = () => {
     });
     if (!modal.hasClass(OPEN)) {
       modal.addClass(OPEN);
+      setTimeout(() => {
+        modal.addClass(ANIMATE);
+      }, 50);
       HTML.css('paddingRight', SCROLL_WIDTH());
       HTMLBODY.addClass(OVERFLOW_HIDDEN);
     }
     else {
       modal.removeClass(OPEN);
+
+      setTimeout(() => {
+        modal.removeClass(ANIMATE);
+      }, 300);
       HTMLBODY.removeClass(OVERFLOW_HIDDEN);
     }
   });
@@ -36,6 +43,9 @@ const modal = () => {
       if ($('[data-modal].is-open').length === 0) {
         HTMLBODY.removeClass(OVERFLOW_HIDDEN);
         HTML.css('paddingRight', 0);
+        setTimeout(() => {
+          $(this).removeClass(ANIMATE);
+        }, 300);
       }
     }
   });
