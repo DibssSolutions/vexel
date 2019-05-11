@@ -124,4 +124,6 @@ class setGrid {
   
 };
 
-new setGrid();
+window.setGrid = new setGrid;
+
+window.setGrid();
