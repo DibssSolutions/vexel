@@ -88,6 +88,20 @@ class InitSetGrid {
 
   }
 
+  initSlider() {
+    this.slider.slick(this.sliderOptions);
+    setTimeout(() => {
+      this.slider.removeClass(HIDDEN);
+    }, 300);
+  }
+
+  destroySlider() {
+    this.slider.addClass(HIDDEN);
+    setTimeout(() => {
+      this.slider.slick('unslick');
+    }, 300);
+  }
+
   setGrid() {
   	this.btnSetGrid.on('click', e => {
       e.preventDefault();
@@ -125,7 +139,7 @@ class InitSetGrid {
 };
 
 window.setGrid = () => {
-  new InitSetGrid();
+  window.grid = new InitSetGrid();
 };
 
 
