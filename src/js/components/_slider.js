@@ -19,23 +19,25 @@ const initSlider = (els,option) => {
 
 // init modal slider
 const modalSlider = $('.js-slider-modal');
-window.initModalSlider = initSlider(modalSlider, {
-  dots: true,
-  infinite: false,
-  slidesToShow: 1,
-  slideToScroll: 1,
-  autoplay: false,
-  // fade: true,
-  adaptiveHeight: true,
-  prevArrow: prevArrow,
-  nextArrow: nextArrow,
-  responsive: [
-	  {
-	     	breakpoint: 991,
-	     	settings: {
-  				adaptiveHeight: true,
-	     		arrows: false
-	     	}
-	  }
-  ]
-});
+window.initModalSlider = () => {
+  initSlider(modalSlider, {
+    dots: true,
+    infinite: false,
+    slidesToShow: 1,
+    slideToScroll: 1,
+    autoplay: false,
+    // fade: true,
+    adaptiveHeight: true,
+    prevArrow: prevArrow,
+    nextArrow: nextArrow,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          adaptiveHeight: true,
+          arrows: false
+        }
+      }
+    ]
+  });
+};
