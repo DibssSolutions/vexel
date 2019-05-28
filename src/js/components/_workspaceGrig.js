@@ -76,7 +76,7 @@ class InitSetGrid {
 
   	  setTimeout(() => { 
   	  	this.slider.removeClass(this.activegrid); 
-  	    this.cards
+  	    $('.js-vexel-teas', this.slider)
   	      .removeClass(this.cardSm)
   	      .addClass(this.cardLg);
   	  	this.slider.slick(this.sliderOptions);
@@ -92,14 +92,50 @@ class InitSetGrid {
     this.slider.slick(this.sliderOptions);
     setTimeout(() => {
       this.slider.removeClass(HIDDEN);
-    }, 300);
+    }, 100);
   }
 
   destroySlider() {
     this.slider.addClass(HIDDEN);
     setTimeout(() => {
       this.slider.slick('unslick');
-    }, 300);
+    }, 100);
+  }
+
+  addSlide(slide) {
+    
+    if (!slide) {
+      console.error('Function .addSlide() not fond slide');
+      return;
+    }
+
+    if (!this.slider.hasClass(this.activegrid)) {
+      this.destroySlider();
+    }
+    setTimeout(() => {
+      this.slider.append(slide);
+      (!this.slider.hasClass(this.activegrid))
+        ? this.initSlider() 
+        : this.sliderTrack.height(this.slider.height());
+    }, 100);
+  }
+
+  removeSlide(slide) {
+
+    if (!slide) {
+      console.error('Function .removeSlide() not fond slide');
+      return;
+    }
+
+    if (!this.slider.hasClass(this.activegrid)) {
+      this.destroySlider();
+    }
+    setTimeout(() => {
+      $(slide).remove();
+      (!this.slider.hasClass(this.activegrid))
+        ? this.initSlider()
+        : this.sliderTrack.height(this.slider.height());
+    }, 100);
   }
 
   setGrid() {
@@ -114,7 +150,7 @@ class InitSetGrid {
   	  setTimeout(() => { 
         this.slider.slick('unslick');
   	  	this.slider.addClass(this.activegrid);
-  	  	this.cards
+  	  	$('.js-vexel-teas', this.slider)
   	  		.removeClass(this.cardLg)
   	  		.addClass(this.cardSm);
   	  	this.sliderTrack.height(this.slider.height());

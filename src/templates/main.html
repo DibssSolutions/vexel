@@ -206,7 +206,7 @@
 											<div class="v-slider__wrap">
 												<div class="v-slider__track js-v-slider-track">
 													<div class="v-slider__list js-slider">
-														<div class="v-slider__item">
+														<div class="v-slider__item js-v-slider-item">
 															<div class="vexel-teas vexel-teas--lg js-vexel-teas" data-anim-scale>
 																<div class="vexel-teas__wrap">
 																	<div class="vexel-teas__top">
@@ -247,7 +247,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="v-slider__item">
+														<div class="v-slider__item js-v-slider-item" data-slide-number="1">
 															<div class="vexel-teas vexel-teas--lg js-vexel-teas" data-anim-scale>
 																<div class="vexel-teas__wrap">
 																	<div class="vexel-teas__top">
@@ -284,7 +284,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="v-slider__item">
+														<div class="v-slider__item js-v-slider-item" data-slide-number="2">
 															<div class="vexel-teas vexel-teas--selected vexel-teas--lg js-vexel-teas" data-anim-scale>
 																<div class="vexel-teas__wrap">
 																	<div class="vexel-teas__top">
@@ -322,7 +322,7 @@
 															</div>
 														</div>
 														{% for i in range(0,5) %}
-														<div class="v-slider__item">
+														<div class="v-slider__item js-v-slider-item">
 														    	<div class="vexel-teas vexel-teas--lg js-vexel-teas" data-anim-scale>
 														    		<div class="vexel-teas__wrap">
 														    			<div class="vexel-teas__top">
@@ -367,6 +367,25 @@
 													</div>
 												</div>
 											</div>
+											<button class="btn js-add-slide" type="button">add slide</button>
+											<script>
+												var buttonAdd = document.querySelector(".js-add-slide");
+												buttonAdd.addEventListener('click', function() {
+												    // Создаю новый слайд (я клонирую, тебе нужно будет записать ноду в переменную после того как аяксом прийдет структура блока и передать атрибутом в window.grid.addSlide)
+												    var slide = document.querySelector(".js-v-slider-item").cloneNode(true);
+												    // Добавляю слайд в слайдер/сетку
+												    window.grid.addSlide(slide);
+												});
+											</script>
+											<button class="btn js-remove-slide" type="button">remove slide</button>
+											<script>
+												var buttonRemove = document.querySelector(".js-remove-slide");
+												buttonRemove.addEventListener('click', function() {
+													// Выбираю нужный слайд (в данном примере беру всегда первый)
+													var slide = document.querySelector('.js-v-slider-item');
+													window.grid.removeSlide(slide)
+												});
+											</script>
 										</div>
 									</div>
 									<div class="my-vexels__extra">

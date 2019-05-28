@@ -12,6 +12,16 @@ const modal = () => {
     const control = $(this);
     const modal = modals.filter(`[data-modal="${control.data('modal-control')}"]`);
     const modalInner = modal.find('[data-modal-container]');
+    const slide = control.parents('[data-slide-number]');
+    const slideNumber = slide.data('slide-number');
+
+    if (slideNumber && slide) { 
+      window.initModalSlider(slide.data('slide-number'));
+    }
+    else {
+      console.error('data-slide-number undefined');
+    }
+
     offsetTop = control.offset().top - modalInner.height();
     offsetLeft = control.offset().left - modalInner.width();
     modalInner.css({
@@ -30,6 +40,9 @@ const modal = () => {
 
       setTimeout(() => {
         modal.removeClass(ANIMATE);
+        if (slideNumber && slide) { 
+          window.destroyModalSlider();
+        }
       }, 300);
       HTMLBODY.removeClass(OVERFLOW_HIDDEN);
     }
@@ -45,6 +58,7 @@ const modal = () => {
         HTML.css('paddingRight', 0);
         setTimeout(() => {
           $(this).removeClass(ANIMATE);
+          window.destroyModalSlider();
         }, 300);
       }
     }
