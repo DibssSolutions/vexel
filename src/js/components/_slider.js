@@ -49,6 +49,7 @@ window.initModalSlider = (numb) => {
 };
 
 window.destroyModalSlider = () => {
+  if (!$('[data-modal] .slick-initialized').length) return;
   modalSlider
     .removeClass(LOADED)
     .slick('unslick');

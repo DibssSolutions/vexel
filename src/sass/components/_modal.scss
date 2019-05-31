@@ -140,3 +140,11 @@
     transition: transform 0.3s ease-out;
   }
 }
+
+.modal {
+  &__container {
+    &_message {
+      max-width: 1140px;
+    }
+  }
+}
