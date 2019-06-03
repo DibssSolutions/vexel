@@ -73,3 +73,18 @@ class Tabs {
 
 $('[data-tabs]').each((i, main) => new Tabs({ main: $(main) }) );
 
+const card = '.vexel-teas';
+const cardClass = 'vexel-teas--selected';
+
+BODY.on('click', card, function() {
+  const thisCard = $(this);
+  (!thisCard.hasClass(cardClass))
+    ? thisCard.addClass(cardClass)
+    : thisCard.removeClass(cardClass);
+  const activeCards = BODY.find(card+'.'+cardClass);
+  const tracker = $('[data-card-tracker]');
+  (activeCards.length > 1)
+    ? tracker.addClass('is-merge')
+    : tracker.removeClass('is-merge');
+});
+

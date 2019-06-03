@@ -605,16 +605,29 @@
                           </div>
                         </a>
                       </div>
-                      <div class="v-controls__item">
+                      <div class="v-controls__item" data-card-tracker>
                         <a class="v-control" data-tabs-control='third'>
-                          <div class="v-control__visual">
-                            <div class="v-control__cover">
-                              <img src="img/icon_control-split-white.svg" width="36" height="26" alt="" class="v-control__icon">
+                          <div class="v-control__wrap">
+                            <div class="v-control__visual">
+                              <div class="v-control__cover">
+                                <img src="img/icon_control-split-white.svg" width="36" height="26" alt="" class="v-control__icon">
+                              </div>
+                            </div>
+                            <div class="v-control__main">
+                              <div class="v-control__title">Split</div>
+                              <div class="v-control__description">Split one vexel to several</div>
                             </div>
                           </div>
-                          <div class="v-control__main">
-                            <div class="v-control__title">Split</div>
-                            <div class="v-control__description">Split one vexel to several</div>
+                          <div class="v-control__wrap v-control__wrap_merge">
+                            <div class="v-control__visual">
+                              <div class="v-control__cover">
+                                <img src="img/icon_control-split-white.svg" width="36" height="26" alt="" class="v-control__icon">
+                              </div>
+                            </div>
+                            <div class="v-control__main">
+                              <div class="v-control__title">Merge</div>
+                              <div class="v-control__description">Merge several vexels</div>
+                            </div>
                           </div>
                         </a>
                       </div>
@@ -1008,7 +1021,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="light-box" data-tabs-container="third">
+                      <div class="light-box" data-card-tracker data-tabs-container="third">
                         <div class="light-box__wrap">
                           <div class="light-box__top">
                             <div class="light-box__description">
@@ -1075,6 +1088,115 @@
                                       </div>
                                       <div class="step-one__btn">
                                         <a href="#" class="btn btn--lg btn--co">Separate</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="light-box__wrap light-box__wrap_merge">
+                          <div class="light-box__top">
+                            <div class="light-box__description">
+                              <div class="description">
+                                <p>This action allows you to merge several Vexels into one.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="light-box__body">
+                            <div class="light-box__steps">
+                              <div class="light-box__step">
+                                <div class="step-one">
+                                  <div class="step-one__wrap">
+                                    <div class="step-one__head">
+                                      <div class="step-one__num">1</div>
+                                      <div class="step-one__title">
+                                        <div class="title">Choose where to merge</div>
+                                      </div>
+                                    </div>
+                                    <div class="step-one__main">
+                                      <div class="step-one__radios">
+                                        <div class="radios">
+                                          <div class="radios__item">
+                                            <label class="radio">
+                                              <input name="change_pay" type="radio" class="radio__input" checked>
+                                              <span class="radio__label">New vexel</span>
+                                            </label>
+                                          </div>
+                                          <div class="radios__item">
+                                            <label class="radio">
+                                              <input name="change_pay" type="radio" class="radio__input">
+                                              <span class="radio__label">3232 5625 5425</span>
+                                            </label>
+                                          </div>
+                                          <div class="radios__item">
+                                            <label class="radio">
+                                              <input name="change_pay" type="radio" class="radio__input">
+                                              <span class="radio__label">3232 5625 5425</span>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="light-box__step">
+                                <div class="step-one">
+                                  <div class="step-one__wrap">
+                                    <div class="step-one__head">
+                                      <div class="step-one__num">2</div>
+                                      <div class="step-one__title">
+                                        <div class="title">Choose currency</div>
+                                      </div>
+                                    </div>
+                                    <div class="step-one__main">
+                                      <div class="step-one__currency">
+                                        <div class="c-currency">
+                                          <form class="c-currency__form">
+                                            <div class="c-currency__line">
+                                              <div class="c-currency__group">
+                                                <div class="c-select">
+                                                  <div class="c-select__current">
+                                                    <button class="c-select__btn" type="button">Litcoin (LTC)</button>
+                                                  </div>
+                                                  <div class="c-select__list select-list open">
+                                                    <div class="select-list__wrap">
+                                                      <div class="select-list__item">
+                                                        <a href="#" class="select-list__link s-link s-link--bc">Bitcoin</a>
+                                                      </div>
+                                                      <div class="select-list__item">
+                                                        <a href="#" class="select-list__link s-link current s-link--lc">Litecoin</a>
+                                                      </div>
+                                                      <div class="select-list__item">
+                                                        <a href="#" class="select-list__link s-link s-link--bcc">Bitcoin Cash</a>
+                                                      </div>
+                                                      <div class="select-list__item">
+                                                        <a href="#" class="select-list__link s-link s-link--dsh">Dash</a>
+                                                      </div>
+                                                      <div class="select-list__item">
+                                                        <a href="#" class="select-list__link s-link s-link--eth">Ethereum</a>
+                                                      </div>
+                                                      <div class="select-list__item">
+                                                        <a href="#" class="select-list__link s-link s-link--rub">Ruble</a>
+                                                      </div>
+                                                      <div class="select-list__item">
+                                                        <a href="#" class="select-list__link s-link s-link--usd">USD</a>
+                                                      </div>
+                                                      <div class="select-list__item">
+                                                        <a href="#" class="select-list__link s-link s-link--usdt">USDT</a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="c-currency__submit">
+                                                <button class="btn btn--lg btn--co" type="submit">Merge vexels</button>
+                                              </div>
+                                            </div>
+                                          </form>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>

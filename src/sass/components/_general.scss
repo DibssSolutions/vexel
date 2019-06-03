@@ -2283,6 +2283,7 @@ body {
 	background-color: $clr-white;
 	box-shadow: 0 6px 10px rgba(154, 140, 130, .3);
 	display: flex;
+	cursor: pointer;
 	flex-direction: column;
 
 	&--selected {
@@ -2510,6 +2511,20 @@ body {
 		}
 	}
 
+	
+	&__wrap {
+		@include flex;
+		.is-merge & {
+			display: none !important;
+		}
+		&_merge {
+			display: none !important;
+			.is-merge & {
+				display: flex !important;
+			}
+		}
+	}
+
 	&__visual {
 		flex-shrink: 0;
 		margin-right: 20px;
@@ -2553,6 +2568,16 @@ body {
 
 		@include media-up(md) {
 			padding: 30px 30px 50px;
+		}
+		.is-merge & {
+			display: none !important;
+		}
+
+		&_merge {
+			display: none !important;
+			.is-merge & {
+				display: block !important;
+			}
 		}
 	}
 
