@@ -36,8 +36,10 @@ const modal = () => {
     const slide = control.parents('[data-slide-number]');
     const slideNumber = slide.data('slide-number');
 
+    let id = $(`[data-slide-index="${slide.data('slide-number')}"]`).index();
+    console.log(id);
     if (slideNumber && slide) { 
-      window.initModalSlider(slide.data('slide-number'));
+      window.initModalSlider(id+1);
     }
     else {
       console.error('data-slide-number undefined');

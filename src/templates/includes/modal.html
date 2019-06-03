@@ -1,14 +1,14 @@
 <!-- begin modal -->
 <div class="modal" data-modal="details">
     <div class="modal__container js-slider-modal" data-modal-container data-modal-inner>
-    	{% for i in range(0,2) %}
-    	<div data-anim-flip data-slide-index="{{i+1}}">
+    	{% for id in ['first', 'second'] %}
+    	<div data-anim-flip data-slide-index="{{id}}">
 	    	<div class="pp-box pp-box--sm" data-anim-flip-front>
 	    		<div class="pp-box__wrap">
 				    <div class="vexel-card">
 				    	<div class="vexel-card__wrap">
 			    			<div class="vexel-card__top">
-			    				<div class="vexel-card__title">Vexel details{{i}}</div>
+			    				<div class="vexel-card__title">Vexel details {{id}}</div>
 			    				<div class="vexel-card__fav">
 			    					<a href="#" class="fav-link fav-link--lg">Favorite</a>
 			    				</div>
