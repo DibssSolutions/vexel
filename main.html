@@ -307,6 +307,7 @@
                                   </div>
                                   <div class="v-slider__item js-v-slider-item" data-slide-number="1">
                                     <div class="vexel-teas vexel-teas--lg js-vexel-teas" data-anim-scale>
+                                      <button class="vexel-teas__remove js-vexel-teas-remove" type="button">X</button>
                                       <div class="vexel-teas__wrap">
                                         <div class="vexel-teas__top">
                                           <div class="vexel-teas__fav">
@@ -338,6 +339,7 @@
                                   </div>
                                   <div class="v-slider__item js-v-slider-item" data-slide-number="2">
                                     <div class="vexel-teas vexel-teas--selected vexel-teas--lg js-vexel-teas" data-anim-scale>
+                                      <button class="vexel-teas__remove js-vexel-teas-remove" type="button">X</button>
                                       <div class="vexel-teas__wrap">
                                         <div class="vexel-teas__top">
                                           <div class="vexel-teas__fav">
@@ -554,7 +556,7 @@
                             <script> var buttonAdd = document.querySelector(".js-add-slide");
 												buttonAdd.addEventListener('click', function() {
 												    // Создаю новый слайд (я клонирую, тебе нужно будет записать ноду в переменную после того как аяксом прийдет структура блока и передать атрибутом в window.grid.addSlide)
-												    var slide = document.querySelector(".js-v-slider-item").cloneNode(true);
+												    var slide = document.querySelectorAll(".js-v-slider-item")[2].cloneNode(true);
 												    // Добавляю слайд в слайдер/сетку
 												    window.grid.addSlide(slide);
 												});
@@ -564,7 +566,7 @@
 												buttonRemove.addEventListener('click', function() {
 													// Выбираю нужный слайд (в данном примере беру всегда первый)
 													var slide = document.querySelector('.js-v-slider-item');
-													window.grid.removeSlide(slide)
+													window.grid.removeSlide(slide);
 												});
 											</script>
                           </div>
