@@ -2283,8 +2283,24 @@ body {
 	background-color: $clr-white;
 	box-shadow: 0 6px 10px rgba(154, 140, 130, .3);
 	display: flex;
-	cursor: pointer;
 	flex-direction: column;
+	
+	&__remove {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		padding: 0;
+		font-size: 14px;
+		color: #000;
+		border: none;
+		z-index: 5;
+		cursor: pointer;
+		transition: opacity .3s;
+		background-color: transparent;
+		&:hover {
+			opacity: .4;
+		}
+	}
 
 	&--selected {
 		background-color: $bg-co_light;

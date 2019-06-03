@@ -49,7 +49,7 @@ const modal = () => {
       'transform': `scale(0.6) translate(${offsetLeft}px,${offsetTop}px)`
     });
     if (!modal.hasClass(OPEN)) {
-      openModal(modal);
+      showModal(modal);
     }
     else {
       modal.removeClass(OPEN);

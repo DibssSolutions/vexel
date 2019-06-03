@@ -1,5 +1,5 @@
 import slick from 'slick-carousel';
-import { LOADED } from '../constants';
+import { LOADED, BODY } from '../constants';
 
 const prevArrow = '<button class="slider-btn slider-btn--prev js-slider-btn-prev">Prev</button>';
 const nextArrow = '<button class="slider-btn slider-btn--next js-slider-btn-next">Next</button>';
@@ -54,3 +54,13 @@ window.destroyModalSlider = () => {
     .removeClass(LOADED)
     .slick('unslick');
 };
+
+
+const removeBtn = '.js-vexel-teas-remove';
+
+BODY.on('click', removeBtn, function() {
+  const parent = $(this).parents('[data-slide-number]');
+  const id = parent.data('slide-number');
+  window.grid.removeSlide(parent);
+  $(`[data-slide-index="${id}"]`).remove();
+});

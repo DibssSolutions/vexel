@@ -76,8 +76,9 @@ $('[data-tabs]').each((i, main) => new Tabs({ main: $(main) }) );
 const card = '.vexel-teas';
 const cardClass = 'vexel-teas--selected';
 
-BODY.on('click', card, function() {
+BODY.on('click', card, function(e) {
   const thisCard = $(this);
+  if ($(e.target).closest('[data-modal-control]').length || $(e.target).closest('.js-vexel-teas-remove').length) return;
   (!thisCard.hasClass(cardClass))
     ? thisCard.addClass(cardClass)
     : thisCard.removeClass(cardClass);
@@ -87,4 +88,8 @@ BODY.on('click', card, function() {
     ? tracker.addClass('is-merge')
     : tracker.removeClass('is-merge');
 });
+
+// BODY.on('click', '[data-modal]', function(e) {
+//    if ($(e.target).closest('[data-modal-control]').length ) return;
+//  });
 
