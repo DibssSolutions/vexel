@@ -37,12 +37,8 @@ const modal = () => {
     const slideNumber = slide.data('slide-number');
 
     let id = $(`[data-slide-index="${slide.data('slide-number')}"]`).index();
-    console.log(id);
     if (slideNumber && slide) { 
       window.initModalSlider(id+1);
-    }
-    else {
-      console.error('data-slide-number undefined');
     }
 
     offsetTop = control.offset().top - modalInner.height();

@@ -12,3 +12,6 @@ $('.btn-main').click(function(e) {
 });
 
 if (!isTouch()) BODY.addClass(NO_TOUCH);
+var modal = $('[data-modal="error-first"]');
+var line = $(modal.clone());
+window.showModal(line);
