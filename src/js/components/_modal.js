@@ -12,9 +12,9 @@ const showModal = (container) => {
 
 const hideModal = popup => {
   $(popup).removeClass(OPEN);
-  HTMLBODY.removeClass(OVERFLOW_HIDDEN);
-  HTML.css('paddingRight', 0);
   if ($('[data-modal].is-open').length === 0) {
+    HTMLBODY.removeClass(OVERFLOW_HIDDEN);
+    HTML.css('paddingRight', 0);
     setTimeout(() => {
       $(popup).removeClass(ANIMATE);
       window.destroyModalSlider();
